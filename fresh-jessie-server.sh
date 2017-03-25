@@ -17,7 +17,6 @@ echo "***************************************************"
 echo ""
 sleep 13
 #
-sudo tee /proc/sys/vm/drop_caches
 sudo apt-get update && apt-get dist-upgrade -y
 
 ###########################################################
@@ -90,6 +89,15 @@ sudo mkdir -p /sepulsa/certs
 # Install MariaDB Server 10.1x packages
 ########################################
 sudo apt-get update
+clear
+echo "Attention please.."
+sleep 2
+echo "Sebentar lagi akan memasang paket MariaDB database server.."
+sleep 2
+echo "Anda akan diminta memasukkan PASSWORD root di database server.."
+sleep 1
+echo "Silakan Anda masukkan dan konfirmasi, kemudian simpan baik-baik password tersebut.."
+sleep 3
 sudo apt-get install -y mariadb-server mariadb-client
 
 ######################
